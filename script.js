@@ -26,9 +26,18 @@ function displayTasks()
     {
         let li = document.createElement("li");
 
-        li.innerHTML = tasks[i];
+        li.innerHTML = tasks[i] + 
+                       " <button onclick='deleteTask(" + i + ")'>Delete</button>";
 
         list.appendChild(li);
     }
+
     document.getElementById("total").innerText = tasks.length;
+}
+
+function deleteTask(index)
+{
+    tasks.splice(index, 1);
+
+    displayTasks();
 }
