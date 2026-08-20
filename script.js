@@ -30,4 +30,5 @@ function displayTasks()
 
         list.appendChild(li);
     }
+    document.getElementById("total").innerText = tasks.length;
 }
