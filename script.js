@@ -4,13 +4,14 @@ function addTask()
 {
     let input = document.getElementById("taskInput");
     let priority = document.getElementById("priority");
+    let dueDate = document.getElementById("dueDate");
 
     if(input.value == "")
     {
         return;
     }
 
-    let task = input.value + " - " + priority.value;
+    let task = input.value + " - " + priority.value + " - " + dueDate.value;
 
     tasks.push(task);
 
