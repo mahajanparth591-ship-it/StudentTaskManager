@@ -3,13 +3,16 @@ let tasks = [];
 function addTask()
 {
     let input = document.getElementById("taskInput");
+    let priority = document.getElementById("priority");
 
     if(input.value == "")
     {
         return;
     }
 
-    tasks.push(input.value);
+    let task = input.value + " - " + priority.value;
+
+    tasks.push(task);
 
     input.value = "";
 
